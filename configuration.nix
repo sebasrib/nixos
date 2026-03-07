@@ -8,7 +8,11 @@
     ./hardware-configuration.nix
   ];
   nixpkgs.config.allowUnfree = true;
-  console.useXkbConfig = true;
+  console = {
+    useXkbConfig = true;
+    font = "ter-v32b";
+    packages = with pkgs; [ terminus_font ];
+  };
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "America/Sao_Paulo";
 
@@ -55,6 +59,7 @@
       PasswordManagerEnabled = false;
       RestoreOnStartup = 1;
       NewTabPageLocation = "about:blank";
+      "force-device-scale-factor" = "1.5";
     };
   };
 
