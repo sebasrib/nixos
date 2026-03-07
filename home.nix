@@ -208,6 +208,11 @@
     enable = true;
     historySize = -1;
     historyFileSize = -1;
+    shellAliases = {
+      my-system-rebuild = "sudo nixos-rebuild switch --flake /home/xd/nixos";
+      my-home-rebuild = "home-manager switch --flake /home/xd/nixos#xd";
+      my-rebuild = "sudo nixos-rebuild switch --flake /home/xd/nixos && home-manager switch --flake /home/xd/nixos#xd";
+    };
   };
   programs.starship = {
     enable = true;
