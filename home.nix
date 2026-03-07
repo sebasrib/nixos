@@ -49,6 +49,9 @@
     wl-clipboard
     kdePackages.kdeconnect-kde
     alarm-clock-applet
+    bundler
+    hugo
+    ncdu
   ];
 
   stylix = {
